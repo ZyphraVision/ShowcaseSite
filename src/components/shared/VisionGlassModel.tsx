@@ -75,10 +75,12 @@ export default function VisionGlassModel({
             />
           </Suspense>
           <OrbitControls 
-            enableZoom={false} 
+            enableZoom={true} 
             enablePan={false}
             autoRotate={autoRotate}
             autoRotateSpeed={1.5}
+            minDistance={2}
+            maxDistance={10}
           />
         </Canvas>
       </ErrorBoundary>

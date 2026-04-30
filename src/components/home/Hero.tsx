@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import GlowButton from '../shared/GlowButton';
+import VisionGlassModel from '../shared/VisionGlassModel';
 import { ChevronRight } from 'lucide-react';
 
 interface HeroProps {
@@ -46,14 +47,13 @@ export default function Hero({ onWaitlistClick }: HeroProps) {
             transition={{ duration: 1, delay: 0.2 }}
             className="relative flex justify-center lg:justify-end"
           >
-            <div className="relative animate-float">
-              {/* Placeholder for 3D render - replace src with your asset */}
-              <div className="w-[400px] h-[300px] md:w-[500px] md:h-[400px] bg-surface rounded-3xl border border-border flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-accent/5" />
-                <span className="text-text-secondary font-mono text-sm">3D Render Placeholder</span>
-                {/* Radial glow behind */}
-                <div className="absolute inset-0 bg-gradient-radial from-accent/20 via-transparent to-transparent opacity-60" />
+            <div className="relative animate-float w-[400px] h-[300px] md:w-[500px] md:h-[400px]">
+              {/* 3D Model Render */}
+              <div className="absolute inset-0 z-20">
+                <VisionGlassModel />
               </div>
+              {/* Radial glow behind */}
+              <div className="absolute inset-0 bg-gradient-radial from-accent/20 via-transparent to-transparent opacity-60 pointer-events-none" />
             </div>
           </motion.div>
         </div>

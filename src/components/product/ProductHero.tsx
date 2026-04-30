@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import VisionGlassModel from '../shared/VisionGlassModel';
 
 export default function ProductHero() {
   return (
@@ -34,14 +35,9 @@ export default function ProductHero() {
             className="relative"
           >
             <div className="aspect-[4/3] bg-surface rounded-3xl border border-border overflow-hidden relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-transparent" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-32 h-32 bg-accent/10 rounded-full mx-auto mb-4 flex items-center justify-center animate-glow-pulse">
-                    <span className="text-4xl">👓</span>
-                  </div>
-                  <span className="text-text-secondary font-mono text-sm">Prototype Render</span>
-                </div>
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute inset-0">
+                <VisionGlassModel />
               </div>
             </div>
             

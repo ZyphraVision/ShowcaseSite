@@ -47,7 +47,7 @@ export default function Hero({ onWaitlistClick }: HeroProps) {
             transition={{ duration: 1, delay: 0.2 }}
             className="relative flex justify-center lg:justify-end"
           >
-            <div className="relative animate-float w-[400px] h-[300px] md:w-[500px] md:h-[400px]">
+            <div className="relative animate-float w-[3000px] h-[300px] md:w-[500px] md:h-[400px]">
               {/* 3D Model Render */}
               <div className="absolute inset-0 z-20">
                 <VisionGlassModel />

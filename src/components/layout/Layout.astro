@@ -6,7 +6,7 @@ import WaitlistModal from '../shared/WaitlistModal';
 ---
 
 <BaseLayout title={Astro.props.title} description={Astro.props.description}>
-  <div class="flex flex-col min-h-screen" id="app-root">
+  <div class="flex flex-col min-h-screen relative z-10" id="app-root">
     <Navbar client:load />
     
     <main class="flex-1">

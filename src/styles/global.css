@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Syne:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #08080f;
+    color: #f0f0f8;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  body {
+    @apply antialiased;
+    background-color: #08080f;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Syne', sans-serif;
+  }
+
+  ::selection {
+    background-color: rgba(124, 109, 250, 0.3);
+    color: #f0f0f8;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-space-8 px-4;
+  }
+  @media (min-width: 640px) {
+    .section-padding {
+      @apply px-6;
+    }
+  }
+  @media (min-width: 768px) {
+    .section-padding {
+      @apply py-space-16;
+    }
+  }
+  @media (min-width: 1024px) {
+    .section-padding {
+      @apply px-8;
+    }
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4;
+  }
+  @media (min-width: 640px) {
+    .container-custom {
+      @apply px-6;
+    }
+  }
+  @media (min-width: 1024px) {
+    .container-custom {
+      @apply px-8;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+---
+import Layout from '../components/layout/Layout.astro';
+import ProductHero from '../components/product/ProductHero';
+import FeatureBreakdown from '../components/product/FeatureBreakdown';
+import UseCases from '../components/product/UseCases';
+import FeedbackModes from '../components/product/FeedbackModes';
+---
+
+<Layout title="Product — ZyphraVision">
+  <ProductHero client:load />
+  <FeatureBreakdown client:visible />
+  <UseCases client:visible />
+  <FeedbackModes client:visible />
+  
+  <section class="section-padding bg-surface/50">
+    <div class="container-custom text-center">
+      <div class="bg-background border border-border rounded-2xl p-8 max-w-3xl mx-auto">
+        <span class="text-accent font-mono text-sm uppercase tracking-widest">Prototype Status</span>
+        <h3 class="font-heading font-bold text-2xl text-text-primary mt-3 mb-4">
+          Currently in prototype phase
+        </h3>
+        <p class="text-text-secondary mb-6">
+          Join the waitlist for early access and beta testing opportunities.
+        </p>
+        <button data-waitlist-trigger class="px-6 py-3 bg-accent text-white rounded-lg font-medium shadow-glow hover:shadow-glow-lg transition-all">
+          Join Waitlist
+        </button>
+      </div>
+    </div>
+  </section>
+</Layout>

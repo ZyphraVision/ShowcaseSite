@@ -1,0 +1,46 @@
+---
+import Layout from '../components/layout/Layout.astro';
+import FounderCard from '../components/team/FounderCard';
+---
+
+<Layout title="Team — ZyphraVision">
+  <section class="section-padding pt-32">
+    <div class="container-custom text-center mb-16">
+      <span class="text-accent font-mono text-sm uppercase tracking-widest">The Team</span>
+      <h1 class="font-heading font-bold text-text-primary mt-4 text-4xl md:text-6xl">Three people.<br>One shared belief.</h1>
+      <p class="text-text-secondary mt-6 text-lg max-w-2xl mx-auto">Technology should remove barriers, not create them.</p>
+    </div>
+
+    <div class="container-custom max-w-5xl">
+      <div class="grid md:grid-cols-3 gap-8">
+        <FounderCard 
+          client:visible
+          index={0}
+          name="Faheem" 
+          role="CEO" 
+          initials="F"
+          bio="The vision and voice of ZyphraVision. Drives strategy, partnerships, and the mission to put the product in the hands of the people who need it most."
+          links={{ linkedin: '#', twitter: '#' }}
+        />
+        <FounderCard 
+          client:visible
+          index={1}
+          name="Adhithya" 
+          role="CTO" 
+          initials="A"
+          bio="Architect of the onboard AI pipeline. Owns everything from the YOLO model to SLAM navigation running on embedded hardware."
+          links={{ linkedin: '#', github: '#' }}
+        />
+        <FounderCard 
+          client:visible
+          index={2}
+          name="JC Kawin" 
+          role="COO" 
+          initials="J"
+          bio="Turns ideas into execution. Manages product development cycles, timelines, and makes sure what gets built actually ships."
+          links={{ linkedin: '#', twitter: '#' }}
+        />
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,11 +1,57 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/layout/Navbar';
+import Footer from '../components/layout/Footer';
+import Hero from '../components/home/Hero';
+import ProblemStatement from '../components/home/ProblemStatement';
+import HowItWorks from '../components/home/HowItWorks';
+import ProductTeaser from '../components/home/ProductTeaser';
+import TechHighlights from '../components/home/TechHighlights';
+import TeamSnippet from '../components/home/TeamSnippet';
+import WaitlistCTA from '../components/home/WaitlistCTA';
+import WaitlistModal from '../components/shared/WaitlistModal';
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout title="ZyphraVision — Vision Redefined">
+  <div id="app">
+    <Navbar client:load onWaitlistClick={() => {}} />
+    <main>
+      <Hero client:load onWaitlistClick={() => {}} />
+      <ProblemStatement client:visible />
+      <HowItWorks client:visible />
+      <ProductTeaser client:visible />
+      <TechHighlights client:visible />
+      <TeamSnippet client:visible />
+      <WaitlistCTA client:load onWaitlistClick={() => {}} />
+    </main>
+    <Footer />
+    <WaitlistModal client:load isOpen={false} onClose={() => {}} />
+  </div>
+</BaseLayout>
+
+<script>
+  // Simple state management for waitlist modal
+  let isModalOpen = false;
+  
+  function openModal() {
+    isModalOpen = true;
+    const event = new CustomEvent('waitlist:open');
+    document.dispatchEvent(event);
+  }
+
+  function closeModal() {
+    isModalOpen = false;
+    const event = new CustomEvent('waitlist:close');
+    document.dispatchEvent(event);
+  }
+
+  // Wire up navbar and CTA buttons
+  document.addEventListener('DOMContentLoaded', () => {
+    const navbar = document.querySelector('[data-navbar]');
+    const waitlistBtns = document.querySelectorAll('[data-waitlist-trigger]');
+    
+    waitlistBtns.forEach(btn => {
+      btn.addEventListener('click', openModal);
+    });
+  });
+</script>

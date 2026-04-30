@@ -1,0 +1,16 @@
+---
+import Layout from '../components/layout/Layout.astro';
+import ContactForm from '../components/contact/ContactForm';
+---
+
+<Layout title="Contact — ZyphraVision">
+  <section class="section-padding pt-32">
+    <div class="container-custom text-center mb-12">
+      <span class="text-accent font-mono text-sm uppercase tracking-widest">Contact</span>
+      <h1 class="font-heading font-bold text-text-primary mt-4 text-4xl md:text-5xl">Get in touch.</h1>
+      <p class="text-text-secondary mt-4 text-lg">Three ways to reach us. One team reading every message.</p>
+    </div>
+
+    <ContactForm client:load />
+  </section>
+</Layout>

@@ -9,11 +9,7 @@
     "module": "ESNext",
     "jsx": "react-jsx",
     "strict": true,
-    "jsxImportSource": "react",
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "jsxImportSource": "react"
   },
   "extends": "astro/tsconfigs/strict",
   "include": [

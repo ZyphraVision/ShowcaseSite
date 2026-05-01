@@ -50,7 +50,8 @@ interface VisionGlassModelProps {
 }
 
 export default function VisionGlassModel({ 
-  modelPath = '/models/vision_glass.glb',
+  modelPath = `${import.meta.env.BASE_URL}models/vision_glass.glb`,
+  
   autoRotate = true
 }: VisionGlassModelProps) {
   return (

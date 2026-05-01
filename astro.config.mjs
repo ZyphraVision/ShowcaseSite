@@ -3,8 +3,8 @@ import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  site: "https://zyphravision.github.io",
-  base: "/ShowcaseSite/",
+  site: "https://zyphra.co.in",
+  base: "/",
   integrations: [react()],
   vite: {
     plugins: [tailwindcss()],

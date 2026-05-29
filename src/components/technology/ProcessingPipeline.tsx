@@ -1,3 +1,5 @@
+'use client';
+
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Camera, Scan, Brain, GitBranch, Ear, Move } from 'lucide-react';

@@ -1,6 +1,8 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import GlowButton from '../shared/GlowButton';
-import VisionGlassModel from '../shared/VisionGlassModel';
+import VisionGlassModel from '../shared/VisionGlassModelDynamic';
 import { ChevronRight } from 'lucide-react';
 
 interface HeroProps {

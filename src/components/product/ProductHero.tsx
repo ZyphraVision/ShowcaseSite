@@ -1,5 +1,7 @@
+'use client';
+
 import { motion } from 'framer-motion';
-import VisionGlassModel from '../shared/VisionGlassModel';
+import VisionGlassModel from '../shared/VisionGlassModelDynamic';
 
 export default function ProductHero() {
   return (

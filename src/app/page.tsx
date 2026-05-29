@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Hero from '@/components/home/Hero';
+import ScrollScene from '@/components/home/ScrollScene';
 import ProblemStatement from '@/components/home/ProblemStatement';
 import HowItWorks from '@/components/home/HowItWorks';
 import ProductTeaser from '@/components/home/ProductTeaser';
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      <Hero />
+      <ScrollScene />
       <ProblemStatement />
       <HowItWorks />
       <ProductTeaser />

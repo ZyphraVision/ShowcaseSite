@@ -1,4 +1,7 @@
+'use client';
+
 import { motion } from 'framer-motion';
+import DecodeText from './hud/DecodeText';
 
 interface SectionHeadingProps {
   label: string;
@@ -7,7 +10,12 @@ interface SectionHeadingProps {
   className?: string;
 }
 
-export default function SectionHeading({ label, title, align = 'center', className = '' }: SectionHeadingProps) {
+export default function SectionHeading({
+  label,
+  title,
+  align = 'center',
+  className = '',
+}: SectionHeadingProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -16,13 +24,18 @@ export default function SectionHeading({ label, title, align = 'center', classNa
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className={`${align === 'center' ? 'text-center' : 'text-left'} ${className}`}
     >
-      <span className="inline-flex items-center gap-2 text-accent text-sm font-mono uppercase tracking-widest mb-4">
-        <span className="w-2 h-2 rounded-full bg-accent animate-glow-pulse" />
+      <span
+        className={`hud-tag mb-4 ${align === 'center' ? 'justify-center' : ''}`}
+      >
+        <span className="w-2 h-2 rounded-full bg-scan animate-glow-pulse" />
         {label}
       </span>
-      <h2 className="font-heading font-bold text-text-primary leading-tight" style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)' }}>
-        {title}
-      </h2>
+      <DecodeText
+        as="h2"
+        text={title}
+        className="font-heading font-bold text-text-primary leading-tight block"
+        style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)' }}
+      />
     </motion.div>
   );
 }

@@ -6,10 +6,10 @@ import GlowButton from '../shared/GlowButton';
 import { useWaitlist } from './WaitlistContext';
 
 const navLinks = [
-  { label: 'Product', href: '/product' },
-  { label: 'Technology', href: '/technology' },
-  { label: 'Team', href: '/team' },
-  { label: 'About', href: '/about' },
+  { label: 'Product', href: '/product', id: '01' },
+  { label: 'Technology', href: '/technology', id: '02' },
+  { label: 'Team', href: '/team', id: '03' },
+  { label: 'About', href: '/about', id: '04' },
 ];
 
 export default function Navbar() {
@@ -28,13 +28,22 @@ export default function Navbar() {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? 'bg-background/80 backdrop-blur-xl border-b border-border'
+            ? 'bg-background/70 backdrop-blur-xl border-b border-border'
             : 'bg-transparent'
         }`}
       >
         <div className="container-custom flex items-center justify-between h-20">
-          <a href="/" className="font-heading font-bold text-xl tracking-tight text-text-primary">
+          <a
+            href="/"
+            className="group flex items-center gap-2 font-heading font-bold text-xl tracking-tight text-text-primary"
+          >
+            <span aria-hidden className="text-scan font-mono text-xs opacity-70 group-hover:opacity-100 transition-opacity">
+              [
+            </span>
             Zyphra<span className="text-accent">Vision</span>
+            <span aria-hidden className="text-scan font-mono text-xs opacity-70 group-hover:opacity-100 transition-opacity">
+              ]
+            </span>
           </a>
 
           <div className="hidden md:flex items-center gap-8">
@@ -42,8 +51,11 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm text-text-secondary hover:text-text-primary transition-colors duration-200"
+                className="group flex items-center gap-1.5 text-sm text-text-secondary hover:text-scan transition-colors duration-200"
               >
+                <span className="font-mono text-[10px] text-scan/40 group-hover:text-scan/80 transition-colors">
+                  {link.id}
+                </span>
                 {link.label}
               </a>
             ))}
@@ -58,6 +70,7 @@ export default function Navbar() {
           <button
             className="md:hidden text-text-primary"
             onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -70,9 +83,10 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-2xl font-heading text-text-primary hover:text-accent transition-colors"
+              className="flex items-baseline gap-2 text-2xl font-heading text-text-primary hover:text-scan transition-colors"
               onClick={() => setMobileOpen(false)}
             >
+              <span className="font-mono text-sm text-scan/50">{link.id}</span>
               {link.label}
             </a>
           ))}

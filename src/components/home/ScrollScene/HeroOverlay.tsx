@@ -41,8 +41,9 @@ export default function HeroOverlay({ scrollProgress }: HeroOverlayProps) {
       >
         <motion.span
           style={{ opacity: labelOpacity }}
-          className="inline-block text-accent font-mono text-sm uppercase tracking-widest mb-6"
+          className="hud-tag mb-6"
         >
+          <span className="w-2 h-2 rounded-full bg-scan animate-glow-pulse" />
           Introducing ZyphraVision
         </motion.span>
 

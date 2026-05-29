@@ -3,6 +3,9 @@ dist/
 out/
 .next/
 
+# astro generated types (leftover)
+.astro/
+
 # dependencies
 node_modules/
 

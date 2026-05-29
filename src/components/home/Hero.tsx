@@ -4,12 +4,10 @@ import { motion } from 'framer-motion';
 import GlowButton from '../shared/GlowButton';
 import VisionGlassModel from '../shared/VisionGlassModelDynamic';
 import { ChevronRight } from 'lucide-react';
+import { useWaitlist } from '../layout/WaitlistContext';
 
-interface HeroProps {
-  onWaitlistClick: () => void;
-}
-
-export default function Hero({ onWaitlistClick }: HeroProps) {
+export default function Hero() {
+  const openWaitlist = useWaitlist();
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
       {/* Background glow */}
@@ -33,7 +31,7 @@ export default function Hero({ onWaitlistClick }: HeroProps) {
               No cloud. No delay. No compromise.
             </p>
             <div className="flex flex-wrap gap-4">
-              <GlowButton onClick={onWaitlistClick}>
+              <GlowButton onClick={openWaitlist}>
                 Join the Waitlist
               </GlowButton>
               <GlowButton variant="ghost" href="#how-it-works">

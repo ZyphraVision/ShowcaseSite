@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import GlowButton from '../shared/GlowButton';
+import { useWaitlist } from './WaitlistContext';
 
 const navLinks = [
   { label: 'Product', href: '/product' },
@@ -11,11 +12,8 @@ const navLinks = [
   { label: 'About', href: '/about' },
 ];
 
-interface NavbarProps {
-  onWaitlistClick?: () => void;
-}
-
-export default function Navbar({ onWaitlistClick = () => {} }: NavbarProps) {
+export default function Navbar() {
+  const openWaitlist = useWaitlist();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -52,7 +50,7 @@ export default function Navbar({ onWaitlistClick = () => {} }: NavbarProps) {
           </div>
 
           <div className="hidden md:block">
-            <GlowButton size="sm" onClick={onWaitlistClick}>
+            <GlowButton size="sm" onClick={openWaitlist}>
               Join Waitlist
             </GlowButton>
           </div>
@@ -78,7 +76,7 @@ export default function Navbar({ onWaitlistClick = () => {} }: NavbarProps) {
               {link.label}
             </a>
           ))}
-          <GlowButton onClick={() => { setMobileOpen(false); onWaitlistClick(); }}>
+          <GlowButton onClick={() => { setMobileOpen(false); openWaitlist(); }}>
             Join Waitlist
           </GlowButton>
         </div>

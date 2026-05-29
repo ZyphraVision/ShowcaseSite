@@ -4,17 +4,15 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import GlowButton from '../shared/GlowButton';
 import AnimatedCounter from '../shared/AnimatedCounter';
+import { useWaitlist } from '../layout/WaitlistContext';
 
-interface WaitlistCTAProps {
-  onWaitlistClick: () => void;
-}
-
-export default function WaitlistCTA({ onWaitlistClick }: WaitlistCTAProps) {
+export default function WaitlistCTA() {
+  const openWaitlist = useWaitlist();
   const [email, setEmail] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    onWaitlistClick();
+    openWaitlist();
   };
 
   return (

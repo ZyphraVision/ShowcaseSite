@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { Navigation, Type, Users, Building2 } from 'lucide-react';
 

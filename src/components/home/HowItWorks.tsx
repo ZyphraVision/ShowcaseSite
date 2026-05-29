@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { Camera, Cpu, Volume2 } from 'lucide-react';
 import SectionHeading from '../shared/SectionHeading';

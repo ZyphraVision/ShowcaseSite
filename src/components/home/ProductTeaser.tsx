@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { ArrowRight, Zap, Brain, Radio } from 'lucide-react';
 import GlowButton from '../shared/GlowButton';

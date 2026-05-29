@@ -1,3 +1,5 @@
+'use client';
+
 import { motion } from 'framer-motion';
 import { Volume2, Vibrate, Ear, AlertTriangle } from 'lucide-react';
 

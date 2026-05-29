@@ -1,3 +1,5 @@
+'use client';
+
 import React, { Suspense, Component } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useGLTF, Environment, ContactShadows } from '@react-three/drei';
@@ -50,7 +52,7 @@ interface VisionGlassModelProps {
 }
 
 export default function VisionGlassModel({ 
-  modelPath = `${import.meta.env.BASE_URL}models/vision_glass.glb`,
+  modelPath = '/models/vision_glass.glb',
   
   autoRotate = true
 }: VisionGlassModelProps) {

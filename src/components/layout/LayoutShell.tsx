@@ -7,7 +7,6 @@ import Footer from './Footer';
 import WaitlistModal from '../shared/WaitlistModal';
 import ScanField from '../shared/hud/ScanField';
 import TelemetryHud from '../shared/hud/TelemetryHud';
-import Reticle from '../shared/hud/Reticle';
 import AmbientFieldCanvas from '../shared/three/AmbientFieldCanvas';
 
 export default function LayoutShell({ children }: { children: React.ReactNode }) {
@@ -17,7 +16,6 @@ export default function LayoutShell({ children }: { children: React.ReactNode })
       <ScanField />
       <AmbientFieldCanvas />
       <TelemetryHud />
-      <Reticle />
       <Navbar />
       <main>{children}</main>
       <Footer />

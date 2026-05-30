@@ -23,10 +23,10 @@ export default function FounderCard({ name, role, bio, initials, links = {}, ind
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.6, delay: index * 0.15 }}
-      className="bg-surface border border-border rounded-2xl p-8 text-center hover:border-accent/30 transition-all duration-300 group"
+      className="bg-surface/40 backdrop-blur-sm border border-border rounded-2xl p-8 text-center hover:border-accent/30 transition-all duration-300 group"
     >
       <div className="relative mb-6 inline-block">
-        <div className="w-28 h-28 bg-background border-2 border-border rounded-full mx-auto flex items-center justify-center group-hover:border-accent/50 transition-colors relative overflow-hidden">
+        <div className="w-28 h-28 bg-surface/60 border-2 border-border rounded-full mx-auto flex items-center justify-center group-hover:border-accent/50 transition-colors relative overflow-hidden">
           <span className="font-heading font-bold text-4xl text-accent/40 group-hover:text-accent/60 transition-colors">
             {initials}
           </span>

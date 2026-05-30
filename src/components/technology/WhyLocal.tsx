@@ -26,7 +26,7 @@ const pillars = [
 
 export default function WhyLocal() {
   return (
-    <section className="section-padding bg-background">
+    <section className="section-padding">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -48,9 +48,9 @@ export default function WhyLocal() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15 }}
-              className="relative bg-surface border border-border rounded-3xl p-8 md:p-10 hover:border-accent/20 transition-all duration-300"
+              className="relative bg-surface/40 backdrop-blur-sm border border-border rounded-3xl p-8 md:p-10 hover:border-accent/20 transition-all duration-300"
             >
-              <div className="absolute top-0 left-8 -translate-y-1/2 w-16 h-16 bg-background border border-border rounded-2xl flex items-center justify-center">
+              <div className="absolute top-0 left-8 -translate-y-1/2 w-16 h-16 bg-surface/70 backdrop-blur border border-border rounded-2xl flex items-center justify-center">
                 <pillar.icon size={28} className="text-accent" />
               </div>
 

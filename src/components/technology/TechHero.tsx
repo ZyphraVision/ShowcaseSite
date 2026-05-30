@@ -2,10 +2,12 @@
 
 import { motion } from 'framer-motion';
 import DecodeText from '../shared/hud/DecodeText';
+import TechAccent from './TechAccent';
 
 export default function TechHero() {
   return (
     <section className="relative min-h-[70vh] flex items-center overflow-hidden pt-20">
+      <TechAccent />
       <div className="container-custom relative z-10 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

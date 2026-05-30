@@ -51,7 +51,7 @@ export default function HowItWorks() {
                 <span className="block font-mono text-6xl font-bold text-scan/15 mb-4">
                   {step.num}
                 </span>
-                <div className="w-16 h-16 bg-surface/60 backdrop-blur-sm border border-border flex items-center justify-center mx-auto mb-6 relative z-10">
+                <div className="w-16 h-16 bg-surface/35 backdrop-blur-sm border border-border flex items-center justify-center mx-auto mb-6 relative z-10">
                   <step.icon className="text-scan" size={26} />
                   {/* corner ticks */}
                   <span className="absolute -top-px -left-px w-2 h-2 border-t border-l border-scan/60" />

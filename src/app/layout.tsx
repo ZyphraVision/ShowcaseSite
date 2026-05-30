@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${sora.variable} ${jbMono.variable}`}>
-      <body className="bg-background text-text-primary overflow-x-hidden font-sans">
+      <body className="text-text-primary overflow-x-hidden font-sans">
         <LayoutShell>{children}</LayoutShell>
       </body>
     </html>

@@ -22,7 +22,7 @@ export default function WaitlistCTA() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="relative max-w-3xl mx-auto text-center border border-scan/20 bg-surface/40 backdrop-blur-sm p-10 md:p-16"
+          className="relative max-w-3xl mx-auto text-center border border-scan/20 bg-surface/20 backdrop-blur-md p-10 md:p-16"
         >
           {/* corner brackets */}
           {[

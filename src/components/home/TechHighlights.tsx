@@ -45,7 +45,7 @@ export default function TechHighlights() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-80px' }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="h-full bg-surface/50 backdrop-blur-sm border border-border p-8 transition-colors duration-200 hover:border-scan/30"
+                className="h-full bg-surface/25 backdrop-blur-sm border border-border p-8 transition-colors duration-200 hover:border-scan/30"
               >
                 <div className="w-12 h-12 bg-scan/10 border border-scan/20 flex items-center justify-center mb-6">
                   <item.icon className="text-scan" size={22} />

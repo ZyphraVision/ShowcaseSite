@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import ScrollScene from '@/components/home/ScrollScene';
+import ParticleHero from '@/components/home/ParticleHero';
+import HomeHero from '@/components/home/HomeHero';
 import ProblemStatement from '@/components/home/ProblemStatement';
 import HowItWorks from '@/components/home/HowItWorks';
 import ProductTeaser from '@/components/home/ProductTeaser';
@@ -14,7 +15,8 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      <ScrollScene />
+      <ParticleHero />
+      <HomeHero />
       <ProblemStatement />
       <HowItWorks />
       <ProductTeaser />

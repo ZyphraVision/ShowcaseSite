@@ -46,13 +46,13 @@ export default function FeedbackModes() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15 }}
-              className="relative bg-background border border-border rounded-3xl overflow-hidden"
+              className="relative bg-surface/40 backdrop-blur-sm border border-border rounded-3xl overflow-hidden"
             >
               <div className={`absolute inset-0 bg-gradient-to-br ${mode.color} opacity-50`} />
               
               <div className="relative p-8 md:p-10">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-14 h-14 bg-surface border border-border rounded-2xl flex items-center justify-center">
+                  <div className="w-14 h-14 bg-surface/70 border border-border rounded-2xl flex items-center justify-center">
                     <mode.icon size={28} className="text-accent" />
                   </div>
                   <div>

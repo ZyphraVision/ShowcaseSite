@@ -59,7 +59,7 @@ export default function ProductHero() {
             <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-              className="absolute -top-4 -right-4 bg-surface border border-scan/30 px-4 py-2 shadow-xl"
+              className="absolute -top-4 -right-4 bg-surface/70 backdrop-blur-sm border border-scan/30 px-4 py-2 shadow-xl"
             >
               <span className="text-scan font-mono text-xs font-bold">{'<'}50ms</span>
               <span className="text-text-secondary text-xs block font-mono">Latency</span>
@@ -68,7 +68,7 @@ export default function ProductHero() {
             <motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-              className="absolute -bottom-4 -left-4 bg-surface border border-scan/30 px-4 py-2 shadow-xl"
+              className="absolute -bottom-4 -left-4 bg-surface/70 backdrop-blur-sm border border-scan/30 px-4 py-2 shadow-xl"
             >
               <span className="text-scan font-mono text-xs font-bold">0g</span>
               <span className="text-text-secondary text-xs block font-mono">Cloud Data</span>

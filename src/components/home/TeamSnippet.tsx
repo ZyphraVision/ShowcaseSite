@@ -41,7 +41,7 @@ export default function TeamSnippet() {
               tone="accent"
               delay={i * 0.12}
             >
-              <div className="bg-surface/50 backdrop-blur-sm border border-border p-8 text-center h-full">
+              <div className="bg-surface/25 backdrop-blur-sm border border-border p-8 text-center h-full">
                 <div className="w-24 h-24 bg-surface-2 border border-border rounded-full mx-auto mb-4 flex items-center justify-center">
                   <span className="font-heading font-bold text-2xl text-accent/50">
                     {founder.name[0]}

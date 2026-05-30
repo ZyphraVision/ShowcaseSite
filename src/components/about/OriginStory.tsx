@@ -53,7 +53,7 @@ export default function OriginStory() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
-            className="bg-background border-l-4 border-accent rounded-r-2xl p-8 my-12"
+            className="bg-surface/40 backdrop-blur-sm border-l-4 border-accent rounded-r-2xl p-8 my-12"
           >
             <p className="text-text-primary font-heading text-xl md:text-2xl italic leading-relaxed">
               "Their inborn or fate disability inability should not restrict them from living a normal life"

@@ -66,7 +66,7 @@ export default function FeatureBreakdown() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="bg-background border border-border rounded-2xl p-6 hover:border-accent/20 transition-colors group"
+              className="bg-surface/40 backdrop-blur-sm border border-border rounded-2xl p-6 hover:border-accent/20 transition-colors group"
             >
               <div className="flex items-start justify-between mb-4">
                 <div className="w-10 h-10 bg-surface rounded-lg flex items-center justify-center group-hover:bg-accent/10 transition-colors">

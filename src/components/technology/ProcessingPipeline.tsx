@@ -74,7 +74,7 @@ export default function ProcessingPipeline() {
                 transition={{ duration: 0.5, delay: i * 0.2 }}
                 className="relative text-center group"
               >
-                <div className="relative z-10 w-24 h-24 bg-background border-2 border-border rounded-2xl flex flex-col items-center justify-center mx-auto mb-4 group-hover:border-accent/50 transition-all duration-300 group-hover:shadow-[0_0_30px_rgba(124,109,250,0.15)]">
+                <div className="relative z-10 w-24 h-24 bg-surface/60 backdrop-blur-sm border-2 border-border rounded-2xl flex flex-col items-center justify-center mx-auto mb-4 group-hover:border-accent/50 transition-all duration-300 group-hover:shadow-[0_0_30px_rgba(124,109,250,0.15)]">
                   <stage.icon size={24} className="text-accent mb-1" />
                   <span className="text-[10px] font-mono text-text-secondary">{stage.label}</span>
                 </div>

@@ -8,12 +8,14 @@ import WaitlistModal from '../shared/WaitlistModal';
 import ScanField from '../shared/hud/ScanField';
 import TelemetryHud from '../shared/hud/TelemetryHud';
 import Reticle from '../shared/hud/Reticle';
+import AmbientFieldCanvas from '../shared/three/AmbientFieldCanvas';
 
 export default function LayoutShell({ children }: { children: React.ReactNode }) {
   const [open, setOpen] = useState(false);
   return (
     <WaitlistContext.Provider value={() => setOpen(true)}>
       <ScanField />
+      <AmbientFieldCanvas />
       <TelemetryHud />
       <Reticle />
       <Navbar />

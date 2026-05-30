@@ -137,7 +137,7 @@ export default function ContactForm() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
-            className="bg-surface border border-accent/20 rounded-2xl p-12 text-center"
+            className="bg-surface/50 backdrop-blur-sm border border-accent/20 rounded-2xl p-12 text-center"
           >
             <div className="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
               <Check size={32} className="text-accent" />
@@ -152,7 +152,7 @@ export default function ContactForm() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             onSubmit={handleSubmit}
-            className="bg-surface border border-border rounded-2xl p-8 space-y-6"
+            className="bg-surface/50 backdrop-blur-sm border border-border rounded-2xl p-8 space-y-6"
           >
             <div className="grid sm:grid-cols-2 gap-6">
               <div>

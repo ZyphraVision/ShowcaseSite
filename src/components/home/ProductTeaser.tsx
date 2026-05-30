@@ -30,7 +30,7 @@ export default function ProductTeaser() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="relative aspect-[4/3] overflow-hidden border border-scan/25 bg-background/60">
+            <div className="relative aspect-[4/3] overflow-hidden border border-scan/25 bg-surface/30 backdrop-blur-sm">
               {/* scene wash */}
               <div
                 className="absolute inset-0"

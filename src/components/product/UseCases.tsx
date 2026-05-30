@@ -32,7 +32,7 @@ const cases = [
 
 export default function UseCases() {
   return (
-    <section className="section-padding bg-background">
+    <section className="section-padding">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -54,7 +54,7 @@ export default function UseCases() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="bg-surface border border-border rounded-2xl p-8 hover:border-accent/20 transition-all duration-300 group"
+              className="bg-surface/40 backdrop-blur-sm border border-border rounded-2xl p-8 hover:border-accent/20 transition-all duration-300 group"
             >
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">

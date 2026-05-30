@@ -16,7 +16,7 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-border mt-auto bg-surface/40 backdrop-blur-sm">
+    <footer className="relative border-t border-border mt-auto bg-surface/15 backdrop-blur-sm">
       {/* system readout strip */}
       <div className="border-b border-border/60">
         <div className="container-custom flex flex-wrap items-center justify-between gap-2 py-3 font-mono text-[10px] uppercase tracking-widest text-text-secondary/60">
@@ -99,6 +99,27 @@ export default function Footer() {
             <a href="#" className="hover:text-scan transition-colors">Terms</a>
           </div>
         </div>
+        <p className="text-text-secondary/40 text-[10px] font-mono mt-4 text-center md:text-right">
+          Based on{' '}
+          <a
+            href="https://sketchfab.com/3d-models/human-ear-model-e1f0f4b6fae54d59bdc3c6b2534eb411"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-scan transition-colors"
+          >
+            &quot;Human Ear Model&quot;
+          </a>{' '}
+          by{' '}
+          <a
+            href="https://sketchfab.com/ssavish274"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-scan transition-colors"
+          >
+            ssavish274
+          </a>
+          {' '}— CC BY 4.0
+        </p>
       </div>
     </footer>
   );

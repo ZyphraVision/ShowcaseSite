@@ -1,0 +1,11 @@
+Model Information:
+* title:	Human Ear Model
+* source:	https://sketchfab.com/3d-models/human-ear-model-e1f0f4b6fae54d59bdc3c6b2534eb411
+* author:	ssavish274 (https://sketchfab.com/ssavish274)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Human Ear Model" (https://sketchfab.com/3d-models/human-ear-model-e1f0f4b6fae54d59bdc3c6b2534eb411) by ssavish274 (https://sketchfab.com/ssavish274) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
